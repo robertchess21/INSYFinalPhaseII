@@ -41,6 +41,11 @@ namespace ClassProject.Model
                 AdvisorType = "CFA";
             }
         }
+
+        public Appointment(DateTime dateTime, string advisorType)
+        {
+            AdvisorType = advisorType;
+        }
     }
 }
 

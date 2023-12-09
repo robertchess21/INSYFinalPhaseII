@@ -59,6 +59,10 @@ namespace INSYFinalPhaseII
             customers.customers.Add(c1);
             customers.customers.Add(c2);
 
+            var newA1 = new Appointment(DateTime.Now.AddDays(1), "CFP");
+            var newA2 = new Appointment(DateTime.Now.AddDays(2), "CFA");
+            var newA3 = new Appointment(DateTime.Now.AddDays(3), "CFP");
+
             appointments = new List<Appointment>();
             appointments.Add(a1);
             appointments.Add(a2);
