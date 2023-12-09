@@ -8,17 +8,39 @@ namespace ClassProject.Model
 {
     public class Appointment
     {
-        private static int autoIncreament;
-        public int Id { get; set; }
-        public DateTime date { get; set; }
+        private static int autoIncrement;
+        public int Id { get; private set; }
+        public DateTime Date { get; set; }
 
+        // AdvisorType property is kept for general use
         public string AdvisorType { get; set; }
-        //these specify the Id, date, and advisor type for the meeting 
+
+        // Specific properties for CFP and CFA
+        public bool IsCFP { get; set; }
+        public bool IsCFA { get; set; }
 
         public Appointment()
         {
-            autoIncreament++;
-            Id = autoIncreament;
+            autoIncrement++;
+            Id = autoIncrement;
+        }
+
+        // Additional constructor to initialize CFP or CFA
+        public Appointment(bool isCFP, bool isCFA) : this()
+        {
+            IsCFP = isCFP;
+            IsCFA = isCFA;
+
+            // Automatically set AdvisorType based on CFP or CFA
+            if (IsCFP)
+            {
+                AdvisorType = "CFP";
+            }
+            else if (IsCFA)
+            {
+                AdvisorType = "CFA";
+            }
         }
     }
 }
+
