@@ -6,6 +6,9 @@ namespace INSYFinalPhaseII
 {
     public class Program
     {
+<<<<<<< HEAD
+        
+=======
         private static Customers customers;
         private static List<Appointment> appointments;
         private static List<CutomerAppointment> customerAppointments;
@@ -208,6 +211,7 @@ namespace INSYFinalPhaseII
 
 
 
+>>>>>>> 7af03c26e0c3d8b41010e1fec31e1fac2122b91b
     }
 }
 
